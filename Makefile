@@ -1,7 +1,9 @@
 NAME            = 	ircserv
 FILES           =	main.cpp \
-					Client.cpp \
-					Epoll_Wrapper.cpp
+					classes/Client.cpp \
+					classes/Epoll_Wrapper.cpp \
+					classes/Socket.cpp \
+					classes/Server.cpp
 
 SRC_DIR         = 	src
 OBJ_DIR         = 	obj
@@ -12,7 +14,7 @@ HEADER_DIR      = 	include
 
 INCLUDES        = 	-I$(HEADER_DIR)
 
-ERROR_FLAGS     = 	-Werror #-Wall -Werror -Wextra
+ERROR_FLAGS     = 	-Werror -Wall -Wextra
 
 all: $(NAME)
 $(NAME): $(MLX) $(LIBFT) $(OBJ)
